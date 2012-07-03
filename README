@@ -1,0 +1,24 @@
+Requirements:
+============
+
+Back end app to produce json data through RESTful urls
+
+
+
+Routes:
+=======
+
+/
+goes to markers
+
+/markers
+returns json data for markers
+
+/events
+returns json data for pois
+
+/events/:markerid
+returns posi for specifc markerid
+
+
+
