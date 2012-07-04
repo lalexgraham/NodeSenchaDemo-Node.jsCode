@@ -136,4 +136,4 @@ app.get('/events/:markerid', function(req, res) {
 
 app.listen(process.env.PORT || 5000);
 console.log('Running on Node.js Version: ' + process.version);
-console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+//console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
