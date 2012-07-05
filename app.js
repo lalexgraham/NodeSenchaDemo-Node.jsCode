@@ -11,8 +11,8 @@ var app = module.exports = express.createServer();
 // Configuration
 
 app.configure(function(){
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
+  //app.set('views', __dirname + '/views');
+  //app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
@@ -33,10 +33,8 @@ app.configure('production', function(){
 var mongoose = require('mongoose');
 
 //local db
-mongoose.connect('mongodb://127.0.0.1/demo');
-
-//mongoose.connect('mongodb://admin:admin@staff.mongohq.com:10091/artsfest');
-
+//mongoose.connect('mongodb://127.0.0.1/demo');
+//remote db
 mongoose.connect('mongodb://test:test@staff.mongohq.com:10081/senchaDemo');
 
 //create the marker Model using the 'marker' collection as a data-source
@@ -68,7 +66,8 @@ eventModel = mongoose.model('event', new mongoose.Schema({
 
 //default url
 app.get('/', function (req, res) {
-   res.redirect('/markers');
+res.redirect('/index.html');
+res.end();
 });
 
 
