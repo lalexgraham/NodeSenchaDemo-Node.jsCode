@@ -9,16 +9,16 @@ Routes:
 =======
 
 /
-goes to markers
+goes to /public/index.html
 
 /markers
 returns json data for markers
 
 /events
-returns json data for pois
+returns json data for events
 
 /events/:markerid
-returns posi for specifc markerid
+returns events for specifc markerid
 
 
 
